@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <mat-grid-list cols="4" rowHeight="2:3" gutterSize="10">
+      <mat-grid-tile *ngFor="let p of product">
+        <div class="row home-image">
+          <img [src]="" alt="">
+          <div class="details">
+            <p><b> {{ p.productName }}</b></p>
+            <p><b style="text-decoration: line-through;"> Tsh. {{p.productPrice}}</b></p>
+               <p> <b>Tsh. {{p.productDiscount}}</b></p>
+          </div>
+          
+         <button type="button" mat-raised-button color="primary" routerLink="/cart"> View</button>
+       
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  

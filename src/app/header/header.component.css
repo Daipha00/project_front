@@ -1,0 +1,10 @@
+.button-span {
+    flex: 1 1 auto;
+  }
+  
+  .sticky-toolbar {
+    position: sticky;
+    top: 0;
+     /* Adjust the z-index as needed */
+  }
+  

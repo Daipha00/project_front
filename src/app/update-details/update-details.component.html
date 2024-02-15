@@ -1,0 +1,56 @@
+<!-- 
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <form #productForm="ngForm" (ngSubmit)="updateProduct(productForm)">
+            <h1 style="text-align: center;">Update Product</h1>
+            
+            <input type="text" ngModel name="productName" placeholder="Product Name" class="form-control mb-3" [(ngModel)]="product.productName" required />
+  
+            <input type="number" ngModel name="productPrice" placeholder="Product Price" class="form-control mb-3" [(ngModel)]="product.productPrice" required />
+  
+            <input type="number" ngModel name="productDiscount" placeholder="Product Discount Price" class="form-control mb-3" [(ngModel)]="product.productDiscount" required />
+               
+              
+            <div class="buttons">
+              <button mat-raised-button color="warn" style="margin-right: 3px;">Clear</button>
+              <button type="submit" mat-raised-button color="primary">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+   <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <form #productForm="ngForm" (ngSubmit)="updateProduct(productForm)">
+            <h1 style="text-align: center;"> Product</h1>
+  
+            <!-- Existing form fields remain unchanged -->
+
+            <input type="text" ngModel name="productName" placeholder="Product Name" class="form-control mb-3" [(ngModel)]="product.productName" required />
+  
+            <input type="number" ngModel name="productPrice" placeholder="Product Price" class="form-control mb-3" [(ngModel)]="product.productPrice" required />
+  
+            <input type="number" ngModel name="productDiscount" placeholder="Product Discount Price" class="form-control mb-3" [(ngModel)]="product.productDiscount" required />
+  
+            <!-- <input type="file" #selectFile (change)="onFileSelected($event)" required>
+            <div *ngIf="product.image">
+                <img [src]="getObjectUrl(product.image)" alt="Selected Image" class="img-thumbnail mt-2" style="max-width: 50%">
+            </div> -->
+  
+            <div class="buttons">
+              <button mat-raised-button color="warn" style="margin-right: 3px;">Clear</button>
+              <button type="submit" mat-raised-button color="primary">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

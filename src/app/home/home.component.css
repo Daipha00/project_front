@@ -1,0 +1,19 @@
+mat-grid-tile{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+home-image{
+    max-width: 90%;
+    max-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    align-self: center;
+}
+
+.details{
+    margin-top: 200px;
+}

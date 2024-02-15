@@ -1,0 +1,12 @@
+<div class="container mt-4">
+<div *ngIf="product">
+    <h2>{{ product.productName }} Details</h2>
+    <div>
+      <p><strong>ID:</strong> {{ product.id }}</p>
+      <p><strong>Product Name:</strong> {{ product.productName }}</p>
+      <p><strong>Product Price:</strong> Tsh. {{ product.productPrice }}</p>
+      <p><strong>Price Discount:</strong> Tsh. {{ product.productDiscount }}</p>
+      <!-- <img [src]="product.image" alt="Image" style="max-width: 30%; height: 90px; margin-top: 10px;"> -->
+    </div>
+  </div>
+</div>

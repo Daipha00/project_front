@@ -1,0 +1,78 @@
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card p-4">
+              <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+                <h1 style="text-align: center;">Add New Product</h1>
+                <!-- <input
+                  type="text"
+                  ngModel
+                  name="productName"
+                  id="userName"
+                  placeholder="Product Name"
+                  class="form-control mb-3"
+                  [(ngModel)]="product.productName"
+                  required
+                /> -->
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Product Name</mat-label>
+                  <input ngModel name="productName" id="productName" matInput placeholder="Enter product name" [(ngModel)]="product.productName">
+                </mat-form-field>
+
+                <br>
+      
+
+                <mat-form-field floatLabel="always">
+                  <mat-label>Product Price</mat-label>
+                  <input ngModel name="productPrice" id="productPrice" matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="product.productPrice">
+                  <span matTextPrefix>Tsh&nbsp;</span>
+                  <span matTextSuffix>.00</span>
+                </mat-form-field>
+
+                <br>
+      
+             
+
+                <mat-form-field floatLabel="always">
+                  <mat-label>Product Discount Price</mat-label>
+                  <input ngModel name="discountPrice" id="discountPrice" matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="product.productDiscount">
+                  <span matTextPrefix>Tsh&nbsp;</span>
+                  <span matTextSuffix>.00</span>
+                </mat-form-field>
+
+                <br>
+      
+
+                 <form enctype="multipart/form-data">
+                    <fieldset>
+                      <div class="form-group">
+                        <div>
+                          <input type="file" (change)="onUploadFile($event)" name="files" multiple class="form-control" required>
+                        </div>
+                      </div>
+                    </fieldset>
+                 </form>
+
+                  
+
+  <div *ngIf="filenames?.length > 0" class="js-upload-finished">
+     <div *ngFor = "let filename of filenames" class="list-group">
+           <a (click)="onDownloadFile(filename)" class="list-group-item list-group-item-success" style="cursor: pointer;">
+           {{ filename }}
+           <a class="alert-success float-right">Download</a>
+         </a><br>
+
+  </div>
+ </div>
+
+      <div class="buttons">
+                <button mat-raised-button color="warn" style="margin-right: 3px;">Clear</button>
+                <button type="submit" mat-raised-button color="primary" >Save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
